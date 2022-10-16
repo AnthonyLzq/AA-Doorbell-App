@@ -1,0 +1,96 @@
+{
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "root": true,
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "prettier",
+    "jest"
+  ],
+  "extends": [
+    "standard",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*-test.js",
+          "jest.config.ts"
+        ],
+        "optionalDependencies": [
+          "**/*.test.ts"
+        ],
+        "peerDependencies": [
+          "**/*.test.ts"
+        ]
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreTrailingComments": true,
+        "ignoreStrings": true,
+        "ignoreUrls": true
+      }
+    ],
+    "newline-before-return": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "object-shorthand": [
+      "error",
+      "always"
+    ],
+    "prefer-const": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "bracketSpacing": true,
+        "printWidth": 80,
+        "quoteProps": "as-needed",
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "none",
+        "jsxSingleQuote": true
+      }
+    ],
+    "radix": [
+      "error",
+      "as-needed"
+    ],
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
+    "curly": [
+      "error",
+      "multi"
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/no-namespace": "off"
+  }
+}
